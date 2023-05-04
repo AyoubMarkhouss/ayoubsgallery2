@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Photography Site</title>
+        <title>Ayoubsgallery / Gallery</title>
         <meta name = "viewport" content = "width=device-width, intial-scale=1.0">
         <link rel="stylesheet" href="ayoubsgallery2.css">
         <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
@@ -28,8 +28,8 @@
                 <ul>
                     <li><a href = "ayoubsgallery2.html" >Home</a></li>
                     <li><a href = "gallerypage.html" class = "active">Gallery</a></li>
-                    <li><a href = "blog.html">Blog</a></li>
-                    <li><a href = "contact.html">Contact</a></li>
+                    <li><a href = "blogpage.html">Blog</a></li>
+                    <li><a href = "contactpage.html">Contact</a></li>
                 </ul>
             </nav>
             
@@ -40,7 +40,7 @@
         <section class = "section-three">
             <div class = "container">
                 <div class = "gallery">
-                    <a href = "img2/cat.jpg">
+                    <a href = "img2/cat.jpg" data-lightbox="gridimage">
                         <div class = "single-img">
                             <img src = "img2/cat.jpg" alt = "gallery image">
                             <div class = "single-img-content">
@@ -49,7 +49,7 @@
                         </div>
                     </a>
 
-                    <a href = "img2/walker.jpg">
+                    <a href = "img2/walker.jpg" data-lightbox="gridimage">
                         <div class = "single-img">
                             <img src = "img2/walker.jpg" alt = "gallery image">
                             <div class = "single-img-content">
@@ -58,7 +58,7 @@
                         </div>
                     </a>
 
-                    <a href = "img2/oldmedina.jpg">
+                    <a href = "img2/oldmedina.jpg" data-lightbox="gridimage">
                         <div class = "single-img">
                             <img src = "img2/oldmedina.jpg" alt = "gallery image">
                             <div class = "single-img-content">
@@ -67,7 +67,7 @@
                         </div>
                     </a>
 
-                    <a href = "img2/building1.jpg">
+                    <a href = "img2/building1.jpg" data-lightbox="gridimage">
                         <div class = "single-img">
                             <img src = "img2/building1.jpg" alt = "gallery image">
                             <div class = "single-img-content">
@@ -76,7 +76,7 @@
                         </div>
                     </a>
 
-                    <a href = "img2/building2.jpg">
+                    <a href = "img2/building2.jpg" data-lightbox="gridimage">
                         <div class = "single-img">
                             <img src = "img2/building2.jpg" alt = "gallery image">
                             <div class = "single-img-content">
@@ -85,7 +85,7 @@
                         </div>
                     </a>
 
-                    <a href = "img2/building3.jpg">
+                    <a href = "img2/building3.jpg" data-lightbox="gridimage">
                         <div class = "single-img">
                             <img src = "img2/building3.jpg" alt = "gallery image">
                             <div class = "single-img-content">
@@ -94,8 +94,8 @@
                         </div>
                     </a>
 
-                    <a href = "img2/alc.jpg">
-                        <div class = "single-img">
+                    <a href = "img2/alc.jpg" data-lightbox="gridimage">
+                        <div class = "single-img" >
                             <img src = "img2/alc.jpg" alt = "gallery image">
                             <div class = "single-img-content">
                                 <h3>American Art Center</h3>
@@ -103,7 +103,7 @@
                         </div>
                     </a>
 
-                    <a href = "img2/biker.jpg">
+                    <a href = "img2/biker.jpg" data-lightbox="gridimage">
                         <div class = "single-img">
                             <img src = "img2/biker.jpg" alt = "gallery image">
                             <div class = "single-img-content">
@@ -112,7 +112,7 @@
                         </div>
                     </a>
 
-                    <a href = "img2/runners.jpg">
+                    <a href = "img2/runners.jpg" data-lightbox="gridimage">
                         <div class = "single-img">
                             <img src = "img2/runners.jpg" alt = "gallery image">
                             <div class = "single-img-content">
@@ -125,28 +125,30 @@
         </section>
         <!-- end of main -->
         <!-- footer -->
-        <footer class = "footer">
-            <div class = "footer-container container">
-                <div>
-                    <h2>Ayoub Markhouss</h2>
-                    <p>Are you passionate about capturing moments that tell a story? Do you find joy in exploring the world through your lens? If so, we invite you to join our vibrant photography community and embark on an exciting journey of creativity and inspiration.</p>
-                </div>
-                <div class="subscribe">
-                    <h3>Free Subscription!</h3>
-                    
-                    <div class = "subs">
-                        <i class = "fas fa-envelope"></i>
-                        <input type = "email" id = "email" placeholder="Email Address">
-                        <button type = "submit">SUBSCRIBE</button>
-                    </div>
+    <footer class = "footer">
+        <div class = "footer-container container">
+            <div>   
+                <h2><b>Hey! before you go..</b></h2>
+                <p>Are you passionate about capturing moments that tell a story? Do you find joy in exploring the world through your lens? If so, we invite you to join our vibrant photography community and embark on an exciting journey of creativity and inspiration.</p>
+            </div>
+            <div class="subscribe">
+                <h3>Free Subscription!</h3>
+                
+                <div class = "subs">
+                    <i class = "fas fa-envelope"></i>
+                    <input type = "email" id = "email" placeholder="Email Address">
+                    <button type = "submit">SUBSCRIBE</button>
                 </div>
             </div>
-            
-            
-        </footer>
-        <!-- end of footer -->
+        </div>
+        
+        
+    </footer>
+    <!-- end of footer -->
 
-        <script src="ayoubsgallery2.js"></script>
-        <script src = "simplelightbox-master/dist/simple-lightbox.js"></script>
+    <script src = "simplelightbox-master/dist/simple-lightbox.js"></script>
+
+    <script src="ayoubsgallery2.js"></script>
+        
 </body>
 </html>

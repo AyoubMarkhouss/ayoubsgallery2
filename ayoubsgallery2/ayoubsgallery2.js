@@ -15,6 +15,7 @@ showBtn.addEventListener('click', function(){
 var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
 
 
+
 function logorefresh(){
     location.reload();
 }
