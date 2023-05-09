@@ -87,6 +87,9 @@ h1, h2, h3, h4, h5, h6, p{
 .top-nav a{
     color: #fff;
 }
+.top-nav2 a{
+    color: #fff;
+}
 .brand-and-navBtn{
     background: #000;
     position: relative;
@@ -131,6 +134,11 @@ h1, h2, h3, h4, h5, h6, p{
     transform: translateY(-600px);
     transition: var(--transition);
 }
+.top-nav2{
+    background: #000;
+    transform: translateY(-600px);
+    transition: var(--transition);
+}
 .showNav{
     transform: translateY(0);
 }
@@ -159,6 +167,33 @@ h1, h2, h3, h4, h5, h6, p{
 .top-nav ul a:hover::after{
     width: 100px;
 }
+/********topnav2*********************************************/
+.top-nav2 ul li{
+    padding: 10px 0;
+}
+.top-nav2 ul a{
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+.top-nav2 ul a::after{
+    content: "";
+    height: 2px;
+    background: var(--lightpurple);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: var(--transition);
+}
+.top-nav2 ul a:hover::after{
+    width: 100px;
+}
+/*/////////////////////////*/
+
 .about{
     margin-top: -160px;
 }
@@ -237,9 +272,7 @@ blockquote span{
 /**************** gallery.html ***************/
 
 /* section three */
-.gallerynavbg .nav-section{
-background-color: #111;
-}
+
 
 .section-three{
     margin: 40px 0;
@@ -267,9 +300,7 @@ background-color: #111;
 /*************** contact.html **************/
 
 /* section five */
-.contactnavbg .nav-section{
-    background-color: #111;
-    }
+
 
 .section-five{
     margin: 40px 0;
@@ -303,6 +334,7 @@ background-color: #111;
     padding: 25px 25px;
     background: var(--dark);
     color: #fff;
+
     
     
 }
@@ -350,9 +382,7 @@ background-color: #111;
 /****************** blog.html ****************/
 
 /* section four */
-.blognavbg .nav-section{
-    background-color: #111;
-    }
+
 .section-four{
     margin: 40px 0;
 }
@@ -389,6 +419,53 @@ background-color: #111;
 }
 
 /*************** end of blog.html ***********/
+/*****************ABOUT ME *********/
+
+.containeraboutme{
+    display: block;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.aboutme{
+    margin: 20px 20px;
+    display: block;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img2/papierpaint.jpg") center/cover no-repeat;
+    box-shadow: var(--darkpurple) 0px 7px 29px 0px;
+}
+.aboutme .aboutmepic img{
+    width: 300px;
+    height: auto;
+    
+}
+.aboutme .aboutmepic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px 40px 40px;
+}
+
+.aboutme .aboutmecard{
+    padding: 40px 40px 40px 20px;
+    color:white;
+}
+
+.aboutme .aboutmetitle{
+    color: var(--lightpurple);
+    text-align: center;
+    font-family:'Cinzel Decorative', cursive;;
+}   
+
+.aboutme .aboutmecard p{
+   padding-top: 20px;
+   text-align: center;
+   text-align: justify;
+
+}
+
+/***********end of About me*******/
+
 
 /******************* Footer Styling *****************/
 
@@ -474,7 +551,13 @@ background-color: #111;
     .gallery{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+
     }
+    .aboutme{
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 
 @media screen and (min-width: 800px){
@@ -495,14 +578,26 @@ background-color: #111;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
-    
+  
 }
 
 @media screen and (min-width: 992px){
     /* header & footer */
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
     .nav-section{
+         background-color: #111;
         display: flex;
         justify-content: space-between;
+
+    }
+    .nav-section2{
+        
+        display: flex;
+        justify-content: space-between;
+
     }
     .navBtn{
         display: none;
@@ -510,6 +605,7 @@ background-color: #111;
     .brand-and-navBtn{
         flex: 0 0 10%;
         background: none;
+       
     }
     .top-nav{
         flex: 0 1 80%;
@@ -518,12 +614,31 @@ background-color: #111;
         align-items: center;
         transition: transform 0s ease;
         transform: translateY(0);
-        background: transparent;
+        background-color: #111;
+        
     }
     .top-nav ul{
         display: flex;
     }
     .top-nav ul li{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .top-nav2{
+        flex: 0 1 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transition: transform 0s ease;
+        transform: translateY(0);
+        background:transparent;
+        
+    }
+    .top-nav2 ul{
+        display: flex;
+    }
+    .top-nav2 ul li{
         margin-right: 30px;
         margin-left: 30px;
     }
@@ -533,15 +648,63 @@ background-color: #111;
    
 
     /* section five */
-    .contact-middle{
+    .contact-middle {
         grid-template-columns: repeat(4, 1fr);
+        
+        
     }
-   
+    
     .contact-bottom{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 40px;
     }
+    /*****************ABOUT ME *********/
+
+    .containeraboutme{
+        display: block;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+    .aboutme{
+        margin: 40px 100px;
+        display: flex;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img2/papierpaint.jpg") center/cover no-repeat;
+        box-shadow: var(--darkpurple) 0px 7px 29px 0px;
+    }
+    .aboutme .aboutmepic img{
+        width: 400px;
+        height: auto;
+        
+    }
+    .aboutme .aboutmepic{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px 40px 40px;
+    }
+
+    .aboutme .aboutmecard{
+        padding: 40px 40px 40px 20px;
+        color:white;
+    }
+    
+    .aboutme .aboutmetitle{
+        color: var(--lightpurple);
+        text-align: center;
+        font-family:'Cinzel Decorative', cursive;;
+    }   
+
+    .aboutme .aboutmecard p{
+       padding-top: 20px;
+       text-align: center;
+       text-align: justify;
+    
+    }
+    
+    /***********end of About me*******/
 }
 
 
@@ -575,6 +738,7 @@ background-color: #111;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
+   
 }
 
 @media screen and (min-width: 1200px){
@@ -589,6 +753,7 @@ background-color: #111;
     .gallery{
         grid-template-columns: repeat(3, 1fr);
     }
+   
 }
 
 @media screen and (min-width: 1400px){
@@ -648,5 +813,7 @@ background-color: #111;
     .gallery{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+
     }
+   
 }
