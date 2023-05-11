@@ -378,6 +378,8 @@ blockquote span{
      
 }
 
+
+
 /************** end of contact.html **********/
 /****************** blog.html ****************/
 
@@ -494,7 +496,7 @@ blockquote span{
     }
 
     .service-section{
-        padding: 80px 0 80px;
+        padding: 40px 0 80px;
     }
     .service-section .row{
         display: flex;
@@ -510,7 +512,7 @@ blockquote span{
     .service-section .service-item-inner{
         position: relative;
         overflow: hidden;
-        
+       
     }   
     .service-section .service-item-inner img{
         width: 100%;
@@ -555,6 +557,123 @@ blockquote span{
 
     }
     /*******End SERVICE*****************/
+/*******PRICING*********************/
+.pricing-plan{
+    width: 300px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+    font-family:'Cinzel Decorative', cursive;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555555;
+    margin: 15px;
+    }
+    
+    .pricing-plan__highlighted{
+        box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        transform: scale(1.05);
+    }
+    .pricing-plan__header{
+        padding: 25px;
+        background: var(--darkpurple);
+        color: #ffffff;
+    }
+    
+    .pricing-plan__title, .pricing-plan__summary{
+         margin: 0; 
+         text-align: center;
+    
+    }   
+    .pricing-plan__title{
+        font-size: 1.5rem;
+        font-weight: 400;
+    
+    }
+    .pricing-plan__summary{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .pricing-plan__description{
+        padding: 25px;
+    }
+    .pricing-plan__list{
+        padding: 0;
+        margin: 0;
+    }
+    .pricing-plan__feature{
+        list-style: none;
+        margin: 0;
+        padding-left: 25px;
+        position: relative;
+        font-size: 0.9rem;
+    
+    }
+    .pricing-plan__feature:not(:last-child){
+        margin-bottom: 0.5rem;
+    }
+    .pricing-plan__feature::before{
+        content: "\2714";
+        color: var(--lightpurple);
+        position: absolute;
+        left: 0;
+    }
+    
+    .pricing-plan__actions{
+        padding: 25px;
+        border-top: 1px solid #000000;
+        display: flex;
+        flex-direction: column;
+    }
+    .pricing-plan__button{
+        display: inline-block;
+        margin: 15px auto;
+        padding: 8px 20px;
+        text-decoration: none;
+        color: var(--darkpurple);
+        background: #ffffff;
+        border-radius: 5px;
+        border: 1px solid var(--darkpurple);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        font-weight: bold;
+    }
+    .pricing-plan__button:hover{
+        background: var(--darkpurple);
+        color: #ffffff;
+    }
+    .pricing-plan__cost{
+        margin: 0;
+        text-align: center;
+        font-size: 2rem;
+        color: #000000;
+    }
+    
+    .pricing-plan__text{
+        font-size: 0.9em;
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+    .pricing-plan__special-text{
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        color: #ffffff;
+        background: #AC46A1;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2) inset;
+    
+    }
+    
+    .pricing-plan-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+
+/********end of pricing***************/
+ 
 
 
 /******************* Footer Styling *****************/
@@ -795,6 +914,7 @@ blockquote span{
     }
     
     /***********end of About me*******/
+    
 }
 
 
