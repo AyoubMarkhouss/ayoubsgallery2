@@ -766,7 +766,26 @@ blockquote span{
         display: flex;
         flex-direction: column;
     }
+    .pricing-plan-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .service-section .container .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
     
+    .service-section .service-item-inner{
+        width: 200px;
+        
+      
+        
+    }
+    .service-section .service-item-inner img{
+        width: 100%;
+    }
+   
 }
 
 @media screen and (min-width: 800px){
@@ -914,7 +933,9 @@ blockquote span{
     }
     
     /***********end of About me*******/
-    
+
+ 
+
 }
 
 
@@ -1027,3 +1048,5 @@ blockquote span{
     }
    
 }
+
+

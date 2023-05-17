@@ -133,15 +133,25 @@
             </div>
             <div class="subscribe">
                 <h3>Free Subscription!</h3>
-                
-                <div class = "subs">
-                    <i class = "fas fa-envelope"></i>
-                    <input type = "email" id = "email" placeholder="Email Address">
-                    <button type = "submit">SUBSCRIBE</button>
-                </div>
+                <form action="gallerypage.php" method="post">
+                    <div class = "subs" >
+                        <i class = "fas fa-envelope"></i>
+                        <input type = "email" name="emails" placeholder="Email Address">
+                        <button type = "submit" name="subscribe">SUBSCRIBE</button>
+                    </div>
+                </form>
             </div>
         </div>
-        
+        <?php
+        $user="root";
+        $psw="root";
+        $cnx="mysql:host=localhost;dbname=ayoubsgallery;";
+        $db=new pdo($cnx,$user,$psw);
+        if(isset($_POST['subscribe']))
+        $email=$_POST['emails'];
+        $news = $db -> prepare("INSERT INTO newsletter VALUES('$email')");
+        $news -> execute();
+        ?>
         
     </footer>
     <!-- end of footer -->

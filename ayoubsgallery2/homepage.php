@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ayoubsgallery2.css">
+    <link rel="stylesheet" href="ayoubsgallery2.css?v=<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
@@ -178,9 +178,9 @@
             </ul>
         </div>
         <div class="pricing-plan__actions">
-            <p class="pricing-plan__cost">$10</p>
+            <p class="pricing-plan__cost">$25</p>
             <!--<p class="pricing-plan__text">per month</p>-->
-            <a href="#" class="pricing-plan__button">purchase</a>
+            <!-- <a href="#" class="pricing-plan__button">purchase</a> -->
             <!--<p class="pricing-plan__text">minimum spend $45 over 12 months</p>-->
         </div>
     </section>
@@ -200,9 +200,9 @@
             </ul>
         </div>
         <div class="pricing-plan__actions">
-            <p class="pricing-plan__cost">$15</p>
+            <p class="pricing-plan__cost">$45</p>
             <!--<p class="pricing-plan__text">per month</p>-->
-            <a href="#" class="pricing-plan__button">purchase</a>
+            <!--<a href="#" class="pricing-plan__button">purchase</a>-->
             <!--<p class="pricing-plan__text">minimum spend $45 over 12 months</p>-->
         </div>
     </section> 
@@ -222,14 +222,45 @@
             </ul>
         </div>
         <div class="pricing-plan__actions">
-            <p class="pricing-plan__cost">$25</p>
+            <p class="pricing-plan__cost">$60</p>
             <!--<p class="pricing-plan__text">per month</p>-->
-            <a href="#" class="pricing-plan__button">purchase</a>
+           <!-- <a href="#" class="pricing-plan__button">purchase</a>-->
             <!--<p class="pricing-plan__text">minimum spend $45 over 12 months</p>-->
         </div>
     </section>
     </div>
     <!--END PRICICNG-->
+        <!-- footer -->
+        <footer class = "footer">
+        <div class = "footer-container container">
+            <div>   
+                <h2><b>Hey! before you go..</b></h2>
+                <p>Are you passionate about capturing moments that tell a story? Do you find joy in exploring the world through your lens? If so, we invite you to join our vibrant photography community and embark on an exciting journey of creativity and inspiration.</p>
+            </div>
+            <div class="subscribe">
+                <h3>Free Subscription!</h3>
+                <form action="gallerypage.php" method="post">
+                    <div class = "subs" >
+                        <i class = "fas fa-envelope"></i>
+                        <input type = "email" name="emails" placeholder="Email Address">
+                        <button type = "submit" name="subscribe">SUBSCRIBE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <?php
+        $user="root";
+        $psw="root";
+        $cnx="mysql:host=localhost;dbname=ayoubsgallery;";
+        $db=new pdo($cnx,$user,$psw);
+        if(isset($_POST['subscribe']))
+        $email=$_POST['emails'];
+        $news = $db -> prepare("INSERT INTO newsletter VALUES('$email')");
+        $news -> execute();
+        ?>
+        
+    </footer>
+    <!-- end of footer -->
 
     <script src="ayoubsgallery2.js"></script>
 </body>

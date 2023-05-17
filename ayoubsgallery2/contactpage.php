@@ -88,8 +88,8 @@
     
    
     <!-- end of main -->
-    <!-- footer -->
-    <footer class = "footer">
+        <!-- footer -->
+        <footer class = "footer">
         <div class = "footer-container container">
             <div>   
                 <h2><b>Hey! before you go..</b></h2>
@@ -97,15 +97,25 @@
             </div>
             <div class="subscribe">
                 <h3>Free Subscription!</h3>
-                
-                <div class = "subs">
-                    <i class = "fas fa-envelope"></i>
-                    <input type = "email" id = "email" placeholder="Email Address">
-                    <button type = "submit" onclick="mailto:'ayoub.markhouss@gmail.com'">SUBSCRIBE</button>
-                </div>
+                <form action="gallerypage.php" method="post">
+                    <div class = "subs" >
+                        <i class = "fas fa-envelope"></i>
+                        <input type = "email" name="emails" placeholder="Email Address">
+                        <button type = "submit" name="subscribe">SUBSCRIBE</button>
+                    </div>
+                </form>
             </div>
         </div>
-        
+        <?php
+        $user="root";
+        $psw="root";
+        $cnx="mysql:host=localhost;dbname=ayoubsgallery;";
+        $db=new pdo($cnx,$user,$psw);
+        if(isset($_POST['subscribe']))
+        $email=$_POST['emails'];
+        $news = $db -> prepare("INSERT INTO newsletter VALUES('$email')");
+        $news -> execute();
+        ?>
         
     </footer>
     <!-- end of footer -->
