@@ -106,16 +106,7 @@
                 </form>
             </div>
         </div>
-        <?php
-        $user="root";
-        $psw="root";
-        $cnx="mysql:host=localhost;dbname=ayoubsgallery;";
-        $db=new pdo($cnx,$user,$psw);
-        if(isset($_POST['subscribe']))
-        $email=$_POST['emails'];
-        $news = $db -> prepare("INSERT INTO newsletter VALUES('$email')");
-        $news -> execute();
-        ?>
+   
         
     </footer>
     <!-- end of footer -->
@@ -137,7 +128,16 @@
             
         }
     
-    ?>
+    ?>     <?php
+        $user="root";
+        $psw="root";
+        $cnx="mysql:host=localhost;dbname=ayoubsgallery;";
+        $db=new pdo($cnx,$user,$psw);
+        if(isset($_POST['subscribe']))
+        $email=$_POST['emails'];
+        $news = $db -> prepare("INSERT INTO newsletter VALUES('$email')");
+        $news -> execute();
+        ?>
     <script src="ayoubsgallery2.js"></script>
     <script src = "simplelightbox-master/dist/simple-lightbox.js"></script>
     </body>

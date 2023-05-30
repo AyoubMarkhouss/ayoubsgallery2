@@ -142,6 +142,14 @@
                 </form>
             </div>
         </div>
+       
+        
+    </footer>
+    <!-- end of footer -->
+
+    <script src = "simplelightbox-master/dist/simple-lightbox.js"></script>
+
+    <script src="ayoubsgallery2.js"></script>
         <?php
         $user="root";
         $psw="root";
@@ -152,13 +160,6 @@
         $news = $db -> prepare("INSERT INTO newsletter VALUES('$email')");
         $news -> execute();
         ?>
-        
-    </footer>
-    <!-- end of footer -->
-
-    <script src = "simplelightbox-master/dist/simple-lightbox.js"></script>
-
-    <script src="ayoubsgallery2.js"></script>
         
 </body>
 </html>

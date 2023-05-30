@@ -174,11 +174,12 @@
                 <li class="pricing-plan__feature">Duration : 1 hour</li>
                 <li class="pricing-plan__feature">Number of photos :  25-30</li>
                 <li class="pricing-plan__feature">Processing time :  10 days</li>
-                <li class="pricing-plan__feature">Short video for IG :  No</li>
+                <li class="pricing-plan__feature">Editing :  Yes</li>
+                <li class="pricing-plan__feature">1 Location</li>
             </ul>
         </div>
         <div class="pricing-plan__actions">
-            <p class="pricing-plan__cost">$25</p>
+            <p class="pricing-plan__cost">$49</p>
             <!--<p class="pricing-plan__text">per month</p>-->
             <!-- <a href="#" class="pricing-plan__button">purchase</a> -->
             <!--<p class="pricing-plan__text">minimum spend $45 over 12 months</p>-->
@@ -196,11 +197,12 @@
                 <li class="pricing-plan__feature">Duration :  3 hours</li>
                 <li class="pricing-plan__feature">Number of photos :  40-50</li>
                 <li class="pricing-plan__feature">Processing time :  7 days</li>
-                <li class="pricing-plan__feature">Short video for IG :  Yes</li>
+                <li class="pricing-plan__feature">Short Insta video  :  Yes</li>
+                <li class="pricing-plan__feature">2 Locations</li>
             </ul>
         </div>
         <div class="pricing-plan__actions">
-            <p class="pricing-plan__cost">$45</p>
+            <p class="pricing-plan__cost">$69</p>
             <!--<p class="pricing-plan__text">per month</p>-->
             <!--<a href="#" class="pricing-plan__button">purchase</a>-->
             <!--<p class="pricing-plan__text">minimum spend $45 over 12 months</p>-->
@@ -218,11 +220,13 @@
             <li class="pricing-plan__feature">Duration :  5 hours</li>
                 <li class="pricing-plan__feature">Number of photos :  70-100</li>
                 <li class="pricing-plan__feature">Processing time :  4 days</li>
-                <li class="pricing-plan__feature">Short video for IG :  Yes</li>
+                <li class="pricing-plan__feature">Cinematic video :  Yes</li>
+                <li class="pricing-plan__feature">Photo print:  Yes</li>
+                <li class="pricing-plan__feature">3 Locations</li>
             </ul>
         </div>
         <div class="pricing-plan__actions">
-            <p class="pricing-plan__cost">$60</p>
+            <p class="pricing-plan__cost">$99</p>
             <!--<p class="pricing-plan__text">per month</p>-->
            <!-- <a href="#" class="pricing-plan__button">purchase</a>-->
             <!--<p class="pricing-plan__text">minimum spend $45 over 12 months</p>-->
@@ -248,7 +252,13 @@
                 </form>
             </div>
         </div>
-        <?php
+       
+        
+    </footer>
+    <!-- end of footer -->
+
+    <script src="ayoubsgallery2.js"></script>
+         <?php
         $user="root";
         $psw="root";
         $cnx="mysql:host=localhost;dbname=ayoubsgallery;";
@@ -258,10 +268,5 @@
         $news = $db -> prepare("INSERT INTO newsletter VALUES('$email')");
         $news -> execute();
         ?>
-        
-    </footer>
-    <!-- end of footer -->
-
-    <script src="ayoubsgallery2.js"></script>
 </body>
 </html>
